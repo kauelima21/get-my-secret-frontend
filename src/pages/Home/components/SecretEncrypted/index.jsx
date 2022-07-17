@@ -1,0 +1,38 @@
+import CopyToClipboard from 'react-copy-to-clipboard';
+import { ButtonSection, Container, FormButton, Input } from './styles';
+import { BiCopy } from 'react-icons/bi';
+import { useEffect, useState } from 'react';
+
+function SecretEncrypted({ data }) {
+  const [copy, setCopy] = useState(false);
+  const baseURL = 'http://localhost:5173';
+  const value = `${baseURL}/${data.secretUUID}/${data.encryptionKey}`;
+
+  useEffect(() => {
+    if (copy) {
+      setTimeout(() => {
+        setCopy(false);
+      }, 2000);
+    }
+  }, [copy]);
+
+
+  return (
+    <Container>
+      <Input type="text" value={value} disabled />
+      <ButtonSection>
+        <a href='/' onClick={() => setData(null)}>
+          <FormButton bg='#29292E' hover='#37373D'>Novo segredo</FormButton>
+        </a>
+        <CopyToClipboard onCopy={() => setCopy(true)} text={value}>
+          <FormButton bg='#8257E5' hover='#996DFF'>
+            <BiCopy size={18} />
+            {copy ? 'Copiado' : 'Copiar'}
+          </FormButton>
+        </CopyToClipboard>
+      </ButtonSection>
+    </Container>
+  );
+}
+
+export default SecretEncrypted;

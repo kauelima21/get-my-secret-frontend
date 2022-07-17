@@ -1,5 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   grid-row: 2;
@@ -9,13 +8,9 @@ export const Container = styled.div`
   background-color: #202024;
   padding: 36px 28px;
 
-  label {
+  a {
     display: block;
-    width: 100%;
-    min-height: 16px;
-    font-size: 14px;
-    color: #87868B;
-    margin-bottom: 8px;
+    text-decoration: none;
   }
 `;
 
@@ -49,6 +44,9 @@ export const ButtonSection = styled.div`
 `;
 
 export const FormButton = styled.button`
+  display: flex;
+  gap: 5px;
+  align-items: center;
   padding: 16px 32px;
   font-size: 12px;
   font-weight: bold;
@@ -63,20 +61,5 @@ export const FormButton = styled.button`
 
   &:hover {
     background-color: ${props => props.hover};
-  }
-`;
-
-export const IconLoad = styled(AiOutlineLoading3Quarters)`
-  ${props => props.fetching && css`
-    animation: ${load} .7s linear infinite;
-  `}
-`;
-
-const load = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 `;
