@@ -32,7 +32,7 @@ function Form({ data, setData }) {
     }
 
     setFetching(true);
-    axios.post('https://tadaqv8whj.execute-api.us-east-1.amazonaws.com/dev/secrets', {
+    axios.post('https://tadaqv8whj.execute-api.us-east-1.amazonaws.com/dev/secret', {
       content,
       password,
     }).then(response => {
