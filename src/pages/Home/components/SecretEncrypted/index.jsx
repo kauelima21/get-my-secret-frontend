@@ -1,12 +1,15 @@
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { ButtonSection, Container, FormButton, Input } from './styles';
+import Input from '../../../../components/Input';
+import FormButton from '../../../../components/FormButton';
+import ButtonSection from '../../../../components/ButtonSection';
+import { Container } from './styles';
 import { BiCopy } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 
 function SecretEncrypted({ data }) {
   const [copy, setCopy] = useState(false);
   const baseURL = 'http://localhost:5173';
-  const value = `${baseURL}/${data.secretUUID}/${data.encryptionKey}`;
+  const value = `${baseURL}/secret/${data.secretUUID}/${data.encryptionKey}`;
 
   useEffect(() => {
     if (copy) {
@@ -21,7 +24,7 @@ function SecretEncrypted({ data }) {
     <Container>
       <Input type="text" value={value} disabled />
       <ButtonSection>
-        <a href='/' onClick={() => setData(null)}>
+        <a href='/'>
           <FormButton bg='#29292E' hover='#37373D'>Novo segredo</FormButton>
         </a>
         <CopyToClipboard onCopy={() => setCopy(true)} text={value}>
