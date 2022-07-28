@@ -23,6 +23,7 @@ faça funcionar!
 ```
 
 Caso você não queira utilizar a api que já vem por padrão, você pode [seguir estes passos](https://github.com/kauelima21/get-my-secret-backend) e criar a sua própria.
+Se optar por criar sua própria api, lembre-se de ir no arquivo [global.js](src/utils/global.js) e alterar a url da mesma.
 
 ## Como funciona?
 
