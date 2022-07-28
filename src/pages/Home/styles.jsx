@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   grid-row: 2;
   grid-column: 2 / 3;
-  align-self: start;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
 
   &>p {
     align-self: start;

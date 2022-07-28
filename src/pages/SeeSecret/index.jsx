@@ -39,13 +39,13 @@ export default function SeeSecret() {
     }
 
     decryptSecret();
-    setClicked(true);
   }
 
   async function decryptSecret() {
     try {
       const content = await GetMySecretApiMethods.delete(`secret/${params.uuid}/${params.encryptionKey}`);
       setData(content.data);
+      setClicked(true);
     } catch (e) {
       setError(e);
     } finally {
