@@ -22,7 +22,7 @@ faça funcionar!
   yarn dev
 ```
 
-Caso você não queira utilizar a [api que já vem por padrão](https://github.com/kauelima21/get-my-secret-backend).
+Caso você não queira utilizar a api que já vem por padrão, você pode [seguir estes passos](https://github.com/kauelima21/get-my-secret-backend) e criar a sua própria.
 
 ## Como funciona?
 
