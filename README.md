@@ -17,6 +17,11 @@ entre na pasta do projeto, abra um terminal e instale os pacotes necessários
   npm i
 ```
 
+Crie um arquivo .env e adicione o seguinte:
+```
+  HOST=<seu-host-local> // ex: HOST=http://localhost:3000
+```
+
 faça funcionar!
 ```
   yarn dev
