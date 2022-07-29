@@ -25,13 +25,12 @@ function Form({ setData, params, showMe }) {
         password: passwordValue,
       });
       setData(content.data);
+      showMe(false);
     } catch (e) {
       setPasswordError({ p: true, m: 'Senha incorreta.' });
     } finally {
       setFetching(false);
     }
-
-    showMe(false);
   }
 
 
