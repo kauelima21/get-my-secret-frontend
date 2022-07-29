@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 function SecretEncrypted({ data }) {
   const [copy, setCopy] = useState(false);
-  const baseURL = 'https://get-my-secret-frontend-git-vercel-kauelima21.vercel.app/';
+  const baseURL = 'https://get-my-secret-frontend.vercel.app';
   const value = `${baseURL}/secret/${data.secretUUID}/${data.encryptionKey}`;
 
   useEffect(() => {
