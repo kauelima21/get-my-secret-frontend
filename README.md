@@ -17,10 +17,7 @@ entre na pasta do projeto, abra um terminal e instale os pacotes necessários
   npm i
 ```
 
-Crie um arquivo .env e adicione o seguinte:
-```
-  HOST=<seu-host-local> // ex: HOST=http://localhost:3000
-```
+Dentro de [SecretEncrypted](src/pages/Home/components/SecretEncrypted/index.jsx) você pode alterar o host para a sua preferência. Por padrão a porta é 5173.
 
 faça funcionar!
 ```
