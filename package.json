@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "env-cmd -f .env vite",
-    "build": "env-cmd -f .env vite build",
+    "dev": "env-cmd vite",
+    "build": "env-cmd vite build",
     "preview": "vite preview"
   },
   "dependencies": {
