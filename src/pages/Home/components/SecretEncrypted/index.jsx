@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 function SecretEncrypted({ data }) {
   const [copy, setCopy] = useState(false);
-  const baseURL = 'https://localhost:5173';
+  const baseURL = 'http://localhost:5173';
   const value = `${baseURL}/secret/${data.secretUUID}/${data.encryptionKey}`;
 
   useEffect(() => {
