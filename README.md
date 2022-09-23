@@ -2,6 +2,8 @@
 
 > Frontend da aplicação feita para a criação de informações que serão acessadas atráves de um link apenas uma vez!
 
+![Home](/images/home.png)
+
 ## Como colocar para funcionar?
 
 Faça o clone do repositório e depois siga estes passos:
